@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Expenses from "./component/Expenses";
+import Expenses from "./component/Expenses/Expenses";
 
 
 
-function App() {
+const App = () => {
     const expenses = [
         {
             date: new Date(2023, 0, 10),
