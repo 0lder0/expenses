@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Expenses from "./component/Expenses/Expenses";
+import NewExpense from "./component/NewExpense/NewExpense";
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
 
   return (
       <div className="App">
+            <NewExpense></NewExpense>
           <Expenses expensesData={expenses}></Expenses>
       </div>
   );
