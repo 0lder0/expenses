@@ -7,7 +7,7 @@ import NewExpense from "./component/NewExpense/NewExpense";
 const Dummy_expenses = [
     {
         id: "e1",
-        date: new Date(2023, 0, 10),
+        date: new Date(2024, 0, 10),
         title: "New book",
         amount: 30.99
     },
@@ -19,7 +19,7 @@ const Dummy_expenses = [
     },
     {
         id: "e3",
-        date: new Date(2023, 0, 10),
+        date: new Date(2025, 0, 10),
         title: "New shoes",
         amount: 30.99
     },
