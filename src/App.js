@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState} from "react";
+import React, {useState} from "react";
 import Expenses from "./component/Expenses/Expenses";
 import NewExpense from "./component/NewExpense/NewExpense";
 
 const Dummy_expenses = [
     {
+        id: "e1",
         date: new Date(2023, 0, 10),
         title: "New book",
-        price: 30.99
+        amount: 30.99
     },
     {
+        id: "e2",
         date: new Date(2023, 0, 10),
         title: "New jeans",
-        price: 99.99
+        amount: 99.99
     },
     {
+        id: "e3",
         date: new Date(2023, 0, 10),
         title: "New shoes",
-        price: 30.99
+        amount: 30.99
     },
 ];
 
@@ -35,7 +38,7 @@ const App = () => {
   return (
       <div className="App">
             <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-          <Expenses expenses={Dummy_expenses}></Expenses>
+          <Expenses expenses={expenses}></Expenses>
       </div>
   );
 }
