@@ -1,10 +1,10 @@
 import React from 'react';
 import './ExpensesFilter.css';
 
-const ExpensesFilter = () => {
+const ExpensesFilter = (props) => {
 
     const filterChangeHandler = (event) => {
-        console.log(event.target.value)
+        props.onChangeFilter(event.target.value);
     }
 
     return (
