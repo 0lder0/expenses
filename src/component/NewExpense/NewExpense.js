@@ -11,10 +11,22 @@ const NewExpense = (props) => {
         props.onAddExpense(expenseData);
     }
 
+    const [isEditing, setIsEditing] = React.useState(true);
+
+
+    const startEditingHandler = () => {
+        setIsEditing(!isEditing);
+    }
+
+    const stopEditingHandler = () => {
+        setIsEditing(!isEditing);
+    }
+
 
     return (
         <div className="new-expense">
-            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}></ExpenseForm>
+            {isEditing && <button onClick={startEditingHandler}>Add New Expense</button>}
+            { !isEditing && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onStopEditingHandler={stopEditingHandler}></ExpenseForm>}
         </div>
     )
 }
